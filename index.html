@@ -42,6 +42,7 @@
                 const computerPoints = document.querySelector(".computerPoints");
                 const playerPoints = document.querySelector(".playerPoints");
                 const options = document.querySelectorAll(".options button");
+               
 
                 options.forEach((option ) =>{
                     option.addEventListener("click",() => {
@@ -52,12 +53,12 @@
                             computer.classList.remove("shakeComputer");
                             player.classList.remove("shakePlayer");
                             
-                            player.src = "./" + option.innerHTML + "Player.png";
+                            player.src =`./` + option.innerHTML + "Player.png" ;
 
                             const choice = [ "STONE" , "PAPER" , "SCISSORS"];
                             let arrayNO = Math.floor(Math.random() * 3);
                             let computerChoice = choice[arrayNO];
-                            computer.src = "./" + computerChoice + "Computer.png";
+                            computer.src = `./` + computerChoice + "Computer.png" ;
 
                             let cPoints = parseInt(computerPoints.innerHTML);
                             let pPoints = parseInt(playerPoints.innerHTML);
