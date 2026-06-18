@@ -45,9 +45,11 @@
 
                 options.forEach((option ) =>{
                     option.addEventListener("click",() => {
+                        player.src = "./stonePlayer.png";
+                        computer.src = "./stoneComputer.png"
                         computer.classList.add("shakeComputer");
                         player.classList.add("shakePlayer");
-
+                        
                         setTimeout(()=> {
                             computer.classList.remove("shakeComputer");
                             player.classList.remove("shakePlayer");
@@ -85,10 +87,6 @@
                                     playerPoints.innerHTML = pPoints + 1;
 
                             }
-                            
-                            
-
-
                         }, 900);
                     });
                 });
